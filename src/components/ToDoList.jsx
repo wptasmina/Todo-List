@@ -1,4 +1,5 @@
 import React from 'react'
+import Themes from './Themes'
 
 export default function ToDoList() {
   return (
@@ -15,9 +16,10 @@ export default function ToDoList() {
         </div>
         <div className=''>
             <ul>
-                <li className='flex justify-between items-center px-4 py-2'>Item 1</li>
-                <li className='flex justify-between items-center px-4 py-2'>Item 2</li>
-                <li className='flex justify-between items-center px-4 py-2'>Item 3</li>
+                <li className='flex justify-between items-center px-4 py-2 border-b border-gray-300 shadow'>
+                  <span>Item 1</span>
+                  <button className='text-xl text-red-500 font-bold cursor-pointer'>X</button>
+                </li>
             </ul>
         </div>
         <div className=''>
