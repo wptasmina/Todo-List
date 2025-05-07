@@ -8,13 +8,11 @@ export default function ToDoList() {
   const todos = useSelector(state => state.todos)
   const dispatch = useDispatch()
   const [text, setText] = useState("")
-  console.log(text);
 
   const handleAddTask = () =>{
     dispatch(addTodo(text))
     setText("")
   }
-
 
   return (
     <div className='space-y-4 max-w-lg mx-auto mt-10'>
@@ -37,7 +35,7 @@ export default function ToDoList() {
             todos.length > 0 ? (
               todos.map((todo) => (
                 <li key={todo.id} className="text-xl font-medium flex justify-between items-center px-4 py-2 border-b border-gray-300 shadow rounded-sm">
-                  <span  onClick={() => dispatch(toggleTodo(todo.id))} className={`${todo.completed ? "line-through  cursor-pointer" : ""}`}>{todo.text}</span>
+                  <span  onClick={() => dispatch(toggleTodo(todo.id))} className={`${todo.completed ? "line-through cursor-pointer" : ""}`}>{todo.text}</span>
                   <button onClick={() => dispatch(removeTodo(todo.id))} className="text-red-600 font-bold text-xl cursor-pointer">X</button>
                 </li>
               ))
