@@ -1,22 +1,31 @@
-// redux/features/todos/todoSlice.js
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice } from "@reduxjs/toolkit";
 
-export const todoSlice = createSlice({
+
+
+ const todoSlice = createSlice({
   name: 'todos',
-  initialState: [],
+  initialState: [
+    {id: 1, text: "Hi, Developer", completed: false},
+  ],
   reducers: {
-    addTodo: (state, action) => {
+    addTodo: (state, action) =>{
       state.push({
-        id: Date.now(),
-        title: action.payload,
+        id: Date.now(), 
+        text: action.payload,
         completed: false,
-      });
+      })
     },
-    removeTodo: (state, action) => {
-      return state.filter(todo => todo.id !== action.payload);
+    removeTodo: (state, action) =>{
+      return state.filter(todo => todo.id !== action.payload )
     },
-  },
-});
+    toggleTodo: (state, action) =>{
+      const todo = state.find((todo) => todo.id === action.payload)
+      if(todo){
+        todo.completed = !todo.completed;
+      }
+    }
+  }
 
-export const { addTodo, removeTodo } = todoSlice.actions;
-export const todoReducer = todoSlice.reducer;
+})
+export const {addTodo, removeTodo, toggleTodo} = todoSlice.actions;
+export const todoReducer = todoSlice.reducer
