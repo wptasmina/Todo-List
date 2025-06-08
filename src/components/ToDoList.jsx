@@ -16,7 +16,7 @@ export default function ToDoList() {
 
   return (
     <div className='space-y-4 max-w-lg mx-auto mt-10'>
-      <h1 className='text-4xl font-extrabold text-gray-800 text-center'>ToDo List</h1>
+      <h1 className='text-4xl font-extrabold text-gray-800 text-center'>Redux ToDo List</h1>
       <div className='space-x-4 flex justify-center'>
         <input
           value={text}
