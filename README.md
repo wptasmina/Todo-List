@@ -1,12 +1,26 @@
-# React + Vite
+### Redux Todo App
+---
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### 🛠️ Tech Stack Table for React + Redux Toolkit Todo App
 
-Currently, two official plugins are available:
+| Category            | Technology                    | Purpose                                        |
+| ------------------- | ----------------------------- | ---------------------------------------------- |
+| ⚛️ Frontend         | **React**                     | Building dynamic UI components                 |
+| ⚡ Bundler           | **Vite**                      | Fast dev server and bundling                   |
+| 📦 State Management | **Redux Toolkit**             | Simplified Redux setup for managing app state  |
+| 📝 CRUD Logic       | **Redux Slice**               | Managing Create, Read, Update, Delete logic    |
+| 💅 Styling          | **Tailwind CSS** *(optional)* | Utility-first CSS framework for styling        |
+| 🧪 Dev Tools        | **Redux DevTools**            | Inspect Redux state and actions in development |
+| 🚀 Deployment       | **Vercel / Netlify**          | Hosting the app                                |
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+### ✅ Key Features of the App
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* Add, Edit, Delete Todos
+* Persist state (optional: localStorage)
+* Filter by status (Completed / Active)
+* Modern code structure using `redux-toolkit`
+
+---
+
